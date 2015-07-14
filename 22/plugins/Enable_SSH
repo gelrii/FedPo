@@ -1,0 +1,29 @@
+#!/bin/bash
+
+Enable_SSH () {
+echo " "
+echo "Enable and Start SSH Server?"
+echo " [Y]es / [N]o"
+echo " "
+echo -n "> "
+read opt
+case $opt in
+	[Yy]* ) echo "Enabling SSH Server..."
+	# Enable and start SSH daemon
+	  sudo systemctl enable sshd.service
+	  sudo systemctl start sshd.service
+	  systemctl status sshd.service
+	# Create (empty) file that is required for X forwarding over SSH
+	  touch $HOME/.Xauthority
+	echo "Enabled SSH Server"
+	Main
+	;;
+	[Nn]* ) echo "Continuing..."
+	Main
+	;;
+	[Qq]* ) Exit
+	;;
+	[Rr]* ) Main
+	;;
+esac
+}
