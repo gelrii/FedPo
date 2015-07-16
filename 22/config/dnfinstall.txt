@@ -19,11 +19,11 @@
  glances
  gpg
  htop
- iftop
  iotop
  lm_sensors
  macchanger
  nano
+ nload
  ntp
  p7zip
  powertop
@@ -32,7 +32,6 @@
  smartmontools
  sushi
  sysstat
- torsocks
  tuned
  unoconv
  unrar
