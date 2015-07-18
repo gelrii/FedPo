@@ -8,7 +8,7 @@ echo " "
 echo -n "> "
 read opt
 case $opt in
-	[Yy]* ) echo "Installing Dotfiles...
+	[Yy]* ) echo "Installing Dotfiles..."
 		mkdir -p $HOME/.gitdotfiles/
 		cd $HOME/.gitdotfiles/
 	# Download default dotfiles. (Update this to allow for custom ones in future.)
