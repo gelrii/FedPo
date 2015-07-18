@@ -29,6 +29,7 @@
  powertop
  recordmydesktop
  redshift
+ screen
  smartmontools
  sushi
  sysstat
