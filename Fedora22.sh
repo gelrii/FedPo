@@ -58,6 +58,7 @@ dir="$(dirname "$0")/$fvsupp/plugins"
 . $dir/WindowButtons
 . $dir/MPVConf
 . $dir/Install_VBox
+. $dir/Install_Tor
 
 until [ $continue = 0 ]; do
 	Start
