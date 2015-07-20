@@ -5,6 +5,7 @@ echo ""
 echo "Select an Option:"
 echo "[I] Install a useful package selection"
 echo "[T] Install Tor Browser Bundle"
+echo "[D] Install Tor Service (Can Run Alongside TBB)"
 echo "[N] Install NVIDIA GPU Drivers [Non-Free]"
 #echo "[Z] Install ZFS on Linux" ## Temporarily disabled
 echo "[O] Install ownCloud Client"
@@ -26,6 +27,7 @@ read opt
 case $opt in
 	[Ii]* ) Install_Packages;;
 	[Tt]* ) Install_TBB;;
+	[Dd]* ) Install_Tor;;
 	[Nn]* ) Install_NVIDIA;;
 #	[Zz]* ) Install_ZoL;; ## Temporarily disabled
 	[Oo]* ) Install_ownCloud;;
