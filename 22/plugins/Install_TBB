@@ -22,8 +22,8 @@ case $opt in
   ## Awk command selects only line number 2 (which should contain the current version number)
 	  tbbver="$(wget -q https://www.torproject.org/projects/torbrowser/RecommendedTBBVersions -O /tmp/TBB.txt && cat /tmp/TBB.txt | cut -d\" -f2 | awk 'NR==2')"
 	  echo "Downloading Tor Browser Bundle version: $tbbver"
-  # Download the appropriate package(s) for this OS + make readable by all
-	  wget -q "https://www.torproject.org/dist/torbrowser/$tbbver/tor-browser-linux64-`echo $tbbver`_en-US.tar.xz" -O /tmp/tbb-$tbbver.tar.xz
+  # Download the appropriate package(s) for this OS
+	  wget "https://www.torproject.org/dist/torbrowser/$tbbver/tor-browser-linux64-`echo $tbbver`_en-US.tar.xz" -O /tmp/tbb-$tbbver.tar.xz
 	  wget -q "https://www.torproject.org/dist/torbrowser/$tbbver/tor-browser-linux64-`echo $tbbver`_en-US.tar.xz.asc" -O /tmp/tbb-$tbbver.asc
   # Verify TBB signature
   ## TODO: Fail whole script if signature verification fails
