@@ -107,7 +107,7 @@ case $opt in
 	  	  sudo dnf install -y torsocks tor-arm
 	  # Download appropriate config for use with TBB
 	  	  sudo rm /etc/tor/torsocks.conf
-		  sudo curl -o /etc/tor/torsocks.conf https://raw.githubusercontent.com/ajhaydock/Fedora-PostInstall/master/$(rpm -E %fedora)/assets/torsocks.conf
+		  sudo curl -o /etc/tor/torsocks.conf https://raw.githubusercontent.com/ajhaydock/FedPo/master/$(rpm -E %fedora)/assets/torsocks.conf
 	  # Return to main script
 		  Installer
 	  ;;
