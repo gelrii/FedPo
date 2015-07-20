@@ -12,6 +12,7 @@
 
 # Command-Line Programs & System Utilities
  aria2
+ arm-tor
  bzip2
  fail2ban
  fuse-sshfs
@@ -34,6 +35,7 @@
  sushi
  sysstat
  tor
+ torsocks
  tuned
  unoconv
  unrar
