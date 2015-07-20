@@ -11,7 +11,7 @@ case $opt in
 	[Yy]* ) echo "Installing Tor..."
 	
 	# Install Tor Packages
-	sudo dnf install tor torsocks arm-tor
+	sudo dnf install tor torsocks tor-arm
 	
 	# Start Tor Service
 	sudo systemctl start tor
