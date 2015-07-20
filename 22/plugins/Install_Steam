@@ -24,13 +24,13 @@ case $opt in
 		sudo dnf install steam libtxc_dxtn.x86_64 libva-intel-driver.i686 libvdpau.i686 steamos-session steamos-modeswitch-inhibitor.i686 libdrm.i686 mesa-libglapi.i686 xboxdrv
 	
 	# Allow in-home streaming through firewall
-		firewall-cmd --zone=public --add-service=steam --permanent
+		sudo firewall-cmd --zone=public --add-service=steam --permanent
 	
 	# Prevent SELinux from killing Big Picture when it is launched
 		sudo setsebool -P allow_execheap 1
 	
 	# Finish
-	echo "NVIDIA Drivers Installed."
+	echo "Steam Client Installed."
 	Installer
 	;;
 [Nn]* ) echo "Continuing..."
