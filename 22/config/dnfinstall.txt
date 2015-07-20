@@ -33,6 +33,7 @@
  smartmontools
  sushi
  sysstat
+ tor
  tuned
  unoconv
  unrar
