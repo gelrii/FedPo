@@ -11,6 +11,7 @@
  rhythmbox
  shotwell
  totem
+ transmission-gtk
  xchat
 # Remove GNOME Boxes Until it Matures as Software
  gnome-boxes
