@@ -35,6 +35,7 @@
  sushi
  sysstat
  tuned
+ tuned-utils
  unoconv
  unrar
  wget
