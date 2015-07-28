@@ -13,6 +13,7 @@ case $opt in
 		cd $HOME/.gitdotfiles/
 	# Download default dotfiles. (Update this to allow for custom ones in future.)
 		git clone https://github.com/ajhaydock/dotfiles.git
+		git clone https://github.com/KittyKatt/screenFetch.git
 		cd $HOME/.gitdotfiles/dotfiles/
 		sh install.sh
 		echo "Installed Dotfiles"
