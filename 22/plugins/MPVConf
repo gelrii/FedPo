@@ -10,8 +10,8 @@ echo -n "> "
 read opt
 case $opt in
 	[Yy]* ) echo "Installing HQ mpv Config..."
-	rm $HOME/.config/mpv/mpv.conf
-	sudo curl -o $HOME/.config/mpv/mpv.conf https://raw.githubusercontent.com/ajhaydock/FedPo/master/$(rpm -E %fedora)/assets/mpv.conf
+	sudo rm $HOME/.config/mpv/mpv.conf
+	curl -o $HOME/.config/mpv/mpv.conf https://raw.githubusercontent.com/ajhaydock/FedPo/master/$(rpm -E %fedora)/assets/mpv.conf
 	echo "Installed HQ mpv Config."
 	Installer
 	;;
