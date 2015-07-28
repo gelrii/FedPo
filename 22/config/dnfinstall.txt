@@ -91,6 +91,7 @@
  libusb-devel
  lua-devel
  make
+ maven
  miniupnpc-devel
  nodejs
  openssl-devel
