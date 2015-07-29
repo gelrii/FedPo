@@ -142,4 +142,3 @@
 # Entertainment
  cowsay
  figlet
- fortune
