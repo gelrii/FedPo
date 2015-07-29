@@ -17,10 +17,7 @@ echo -n "> "
 read opt
 case $opt in
   [Yy]* ) echo "Installing Proprietary NVIDIA Drivers..."
-  	
-  	# Enable negativo17.org Repository
-  	sudo dnf config-manager --add-repo=http://negativo17.org/repos/fedora-nvidia.repo
-  	
+
   	# Remove old drivers, if present from a previous installation
   	sudo dnf remove \*nvidia\*
   	
@@ -29,9 +26,9 @@ case $opt in
   	## Install the 32-bit nvidia-driver-libs package to allow for greater compatibility with games and Steam.
   	## Install the cuda and cuda-devel packages to allow the use of CUDA.
   	## Install a selection of packages (vdpauinfo libva-vdpau-driver libva-utils) to assist with hardware video decoding.
-  	sudo dnf install nvidia-driver akmod-nvidia kernel-devel nvidia-driver-libs.i686 cuda cuda-devel acpid vdpauinfo libva-vdpau-driver libva-utils
+  	sudo dnf install akmod-nvidia "kernel-devel-uname-r == $(uname -r)" xorg-x11-drv-nvidia-libs.i686 cuda cuda-devel acpid vdpauinfo libva-vdpau-driver libva-utils
   	
-  	## [Rebuilding initramfs no longer required with negativo17 repo]
+  	## Rebuilding initramfs not required in RPMFusion guide (http://rpmfusion.org/Howto/nVidia)
   	#echo "Generating New initramfs..."
 	#sudo mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
 	#sudo dracut /boot/initramfs-$(uname -r).img $(uname -r)
