@@ -35,7 +35,7 @@ case $opt in
   		xorg-x11-drv-nvidia-cuda \
   		xorg-x11-drv-nvidia-cuda.i686 \
   		xorg-x11-drv-nvidia-libs.i686 \
-  		kernel-devel-$ uname -r
+  		kernel-devel-$(uname -r)
   	
   	## Rebuilding initramfs not required in RPMFusion guide (http://rpmfusion.org/Howto/nVidia)
   	#echo "Generating New initramfs..."
