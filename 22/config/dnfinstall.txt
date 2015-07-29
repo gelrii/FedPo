@@ -13,6 +13,7 @@
 
 # Command-Line Programs & System Utilities
  aria2
+ beep
  bzip2
  fail2ban
  fuse-sshfs
@@ -137,3 +138,8 @@
 # Desktop Environment Switching Tools
  switchdesk
  system-switch-displaymanager
+
+# Entertainment
+ cowsay
+ figlet
+ fortune
