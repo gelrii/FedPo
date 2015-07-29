@@ -27,15 +27,15 @@ case $opt in
   	## Install the cuda and cuda-devel packages to allow the use of CUDA.
   	## Install a selection of packages (vdpauinfo libva-vdpau-driver libva-utils) to assist with hardware video decoding.
   	sudo dnf install \
-  		akmod-nvidia \
-  		"kernel-devel-uname-r == $(uname -r)" \
-  		xorg-x11-drv-nvidia-libs.i686 \
-  		xorg-x11-drv-nvidia-cuda \
   		acpid \
-  		vdpauinfo \
-  		libva-vdpau-driver \
+  		akmod-nvidia \
   		libva-utils \
-  		xorg-x11-drv-nvidia-cuda.i686
+  		libva-vdpau-driver \
+  		vdpauinfo \
+  		xorg-x11-drv-nvidia-cuda \
+  		xorg-x11-drv-nvidia-cuda i686 \
+  		xorg-x11-drv-nvidia-libs i686 \
+  		kernel-devel-$ uname -r
   	
   	## Rebuilding initramfs not required in RPMFusion guide (http://rpmfusion.org/Howto/nVidia)
   	#echo "Generating New initramfs..."
